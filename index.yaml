@@ -3,7 +3,7 @@ entries:
   demo-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-04T14:13:36.533027463+05:30"
+    created: "2023-07-06T12:04:35.466880124+05:30"
     description: A Helm chart for Kubernetes
     digest: 45792639d361f498400c423e1c8063f3d70e64743cd10e771b80720b71a437bd
     name: demo-chart
@@ -14,7 +14,7 @@ entries:
   firstchart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-04T14:13:36.536707682+05:30"
+    created: "2023-07-06T12:04:35.469638318+05:30"
     dependencies:
     - condition: mysql.enabled
       import-values:
@@ -30,4 +30,22 @@ entries:
     urls:
     - firstchart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-04T14:13:36.532457731+05:30"
+  trainingchart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-07-06T12:04:35.471441614+05:30"
+    dependencies:
+    - import-values:
+      - child: startupProbe
+        parent: tomCatStartUpProbe
+      name: tomcat
+      repository: http://charts.bitnami.com/bitnami
+      version: '>=8.9.1'
+    description: A Helm chart for Kubernetes
+    digest: baaa8cb2a9d5326197cc2d1eaf9edccb3ebf693e9e8ec370f1da6ed929e10ae7
+    name: trainingchart
+    type: application
+    urls:
+    - trainingchart-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-07-06T12:04:35.466491406+05:30"
