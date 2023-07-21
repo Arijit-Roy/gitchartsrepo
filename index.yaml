@@ -1,9 +1,24 @@
 apiVersion: v1
 entries:
+  couponservice:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-07-21T12:15:43.002422675+05:30"
+    dependencies:
+    - name: mysql
+      repository: '@bitnami'
+      version: '>8.8.6'
+    description: A Helm chart for Kubernetes
+    digest: a6b6337232421d9f8d7f4f617ebceab723d15020f0138a60cd7fa5cbb7e47f26
+    name: couponservice
+    type: application
+    urls:
+    - couponservice-0.1.0.tgz
+    version: 0.1.0
   demo-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-06T12:39:00.638056512+05:30"
+    created: "2023-07-21T12:15:43.003329515+05:30"
     description: A Helm chart for Kubernetes
     digest: 45792639d361f498400c423e1c8063f3d70e64743cd10e771b80720b71a437bd
     name: demo-chart
@@ -14,7 +29,7 @@ entries:
   firstchart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-06T12:39:00.641557813+05:30"
+    created: "2023-07-21T12:15:43.006419536+05:30"
     dependencies:
     - condition: mysql.enabled
       import-values:
@@ -33,7 +48,7 @@ entries:
   trainingchart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-06T12:39:00.643533921+05:30"
+    created: "2023-07-21T12:15:43.009017518+05:30"
     dependencies:
     - name: tomcat
       repository: http://charts.bitnami.com/bitnami
@@ -45,4 +60,4 @@ entries:
     urls:
     - trainingchart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-06T12:39:00.637405002+05:30"
+generated: "2023-07-21T12:15:42.999047595+05:30"
